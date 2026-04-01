@@ -301,39 +301,58 @@
       margin-top: 10px;
     }
 
+    .timer-wrap {
+      margin-top: 12px;
+    }
+
     .timer-btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      background: none;
-      border: 1px solid var(--border);
-      padding: 5px 14px;
-      border-radius: 20px;
+      gap: 10px;
+      background: var(--rust);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 0.9rem;
-      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
       cursor: pointer;
       transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(139,58,26,0.25);
+      letter-spacing: 0.03em;
     }
 
     .timer-btn:hover {
-      border-color: var(--rust);
-      color: var(--rust);
+      background: var(--rust-light);
+      box-shadow: 0 4px 14px rgba(139,58,26,0.35);
+      transform: translateY(-1px);
+    }
+
+    .timer-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 4px rgba(139,58,26,0.2);
     }
 
     .timer-btn.running {
-      background: var(--rust);
-      border-color: var(--rust);
-      color: white;
+      background: var(--ink);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .timer-btn.running:hover {
+      background: #2e2010;
     }
 
     .timer-btn.done {
       background: var(--sage);
-      border-color: var(--sage);
-      color: white;
+      box-shadow: 0 2px 8px rgba(90,107,79,0.25);
     }
 
-    .timer-icon { font-size: 13px; }
+    .timer-btn.done:hover {
+      background: #4a5a40;
+    }
+
+    .timer-icon { font-size: 15px; }
 
     /* Notes */
     .notes-section {
